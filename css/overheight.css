@@ -1,0 +1,58 @@
+/* CSS Document */
+body.menu{height:100% !important; position:fixed; top:0; left:0; overflow:hidden}
+
+.over-container{position:fixed;  top:63px; bottom:0; left:0; right:0; margin:auto;  background-color:white;  z-index:10000; display:none;   overflow:auto;}
+
+
+.over-container.filter{  background-image:none;}
+
+.overheight-close{ display:none;  width:20px; height:22px; position:absolute; top:20px; right:20px; z-index:10100}
+ .main-menu.level-2{display: none;}
+.main-menu .havechild > a{position: relative}
+.main-menu .havechild > a:after{content: ''; display: block; position: absolute; background-image: url(../images/arrow.svg); right: 15px; top: 15px; -webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg); height: 10px; width: 10px; background-repeat: no-repeat; transition: 0.3s}
+.main-menu .havechild.open > a:after{-webkit-transform: rotate(0deg);-ms-transform: rotate(0deg);transform: rotate(0deg); height: 10px; width: 10px; background-repeat: no-repeat; transition: 0.3s}
+
+.overheight-close:before, .overheight-close:after{ 
+	content:""; position:absolute; display:block; height:100%; width:5px; background:#fff;
+	}
+.overheight-close:before{ 
+    -webkit-transform: skewX(45deg);
+    transform: skewX(45deg);
+	}
+.overheight-close:after{ 
+	 -webkit-transform: skewX(-45deg);
+    transform: skewX(-45deg);} 	
+
+.over-content{display: flex; display:-webkit-flex; justify-content:center; -webkit-justify-content:center; align-items:center; -webkit-align-items:center; flex-direction:column; -webkit-flex-direction:column; }	
+.over-content .main-menu.level-1{min-width: 260px}
+.over-content .main-menu{list-style: none}
+.over-content .main-menu.level-1 .level-1 > a{color: #535353; border-radius: 5px; padding: 10px 15px; display: block; text-decoration: none} 
+.over-content .main-menu .level-1{margin-top: 10px}
+.over-content .main-menu.level-2, .over-content .main-menu.level-3{padding-top: 10px}
+.over-content .main-menu.level-2 a, .over-content .main-menu.level-3 a{text-decoration: none}
+.over-content .main-menu.level-2 .level-2, .over-content .main-menu.level-3 .level-3{padding: 5px 0; }
+.over-content .main-menu.level-2 .level-2 a, .over-content .main-menu.level-3 .level-3 a{font-size: 15px; padding-left: 10px; color: #525252; display: block; line-height: 26px; width: 100%}
+.main-menu.level-3{display: none} 
+
+
+@media only screen and (min-width: 768px){
+	
+	
+
+   .main-menu ul.level-1 > li:hover .main-menu.level-2 {display: block; }
+	 .main-menu ul.level-2 > li:hover .main-menu.level-3 {display: block; }
+	.main-menu.level-1 > .level-1{position: relative}
+	.main-menu.level-1 > .level-1 .main-menu.level-2, .main-menu.level-1 > .level-1 .main-menu.level-3{position: absolute;background-color: black; top: 100%; left: 0; padding-bottom: 5px}
+	.main-menu .havechild > a:after{display: inline-block; padding-left: 10px; height: 6px; position: relative;transition: 0.3s;right: auto; top: auto}
+	.main-menu ul.level-1 > li:hover a:after{-webkit-transform: rotate(180deg); transform: rotate(180deg); transition: 0.3s;}
+	.main-menu ul.level-2 .level-2.havechild.close a:after{-webkit-transform: rotate(90deg); transform: rotate(90deg); transition: 0.3s;position: absolute; top: 0; bottom: 0; right: 20px; margin: auto; background-position: center}
+	
+	.main-menu.level-3{    top: 0!important;
+    left: auto!important;
+    right: -100%;} 
+	
+	li.level-2.havechild{position: relative}
+}
+
+
+
